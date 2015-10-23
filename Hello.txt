@@ -1,3 +1,4 @@
 <script>
 alert("Hello, World!");
+alert("Hello, everbody!");
 </script>

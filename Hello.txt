@@ -1,5 +1,5 @@
 <script>
-alert("Hello, World!");
-alert("Hello, everbody!");
-alert("Hello!");
+alert("Hello, World;");
+alert("Hello, everbody;");
+alert("Hello;");
 </script>

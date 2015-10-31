@@ -2,4 +2,5 @@
 alert("Hello, World!");
 alert("Hello, everbody!");
 alert("Hello!");
+alert("Hello my dear friend!");
 </script>

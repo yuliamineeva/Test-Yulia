@@ -10,7 +10,6 @@ public class Calculator {
             code = scanner.nextLine();
             if (code.equals("+") || code.equals("*") || code.equals("^") || code.equalsIgnoreCase("root")
                     || code.equals("-") || code.equals("/") || code.equals("%") || code.equalsIgnoreCase("rand")) {
-                // 3.2.1: true-секция
                 System.out.print("Введите число A: ");
                 double a = new Double(scanner.nextLine().replace(',', '.'));
                 System.out.print("Введите число B: ");

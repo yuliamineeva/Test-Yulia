@@ -138,7 +138,6 @@ public class Field {
                 cell = cellsPlayer[point.getX()][point.getY()];
             } while (cell.getSymbol() == '*' || cell.getSymbol() == 'D');
             char[] chars = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
-
             System.out.println("Ход компьютера: " + chars[point.getX()] + (point.getY() + 1));
         }
         if (cell.getSymbol() == '*' || cell.getSymbol() == 'D') {
@@ -167,7 +166,6 @@ public class Field {
         } else {
             System.out.println("Ошибка!");
         }
-//        System.out.println((point.getX() + 1) + " " + (point.getY() + 1));      // для тестирования
     }
 
     public boolean isGameEnd() {

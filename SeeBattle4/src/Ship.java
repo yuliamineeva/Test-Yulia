@@ -7,21 +7,6 @@ public class Ship {
     Point leftUp = new Point(); // верхняя левая точка
     Point rightDown = new Point(); //нижняя праваЯ точка
 
-    //
-//    public Ship(int length, Point leftUp, boolean isHorizontal) {
-//        this.length = length;
-//        this.leftUp = leftUp;
-//        this.isHorizontal = isHorizontal;
-//        Point rightDown = new Point();
-//        if (isHorizontal) {
-//            rightDown.setX(leftUp.getX() + length - 1);
-//            rightDown.setY(leftUp.getY());
-//        } else {
-//            rightDown.setX(leftUp.getX());
-//            rightDown.setY(leftUp.getY() + length - 1);
-//        }
-//        healthyDeck = length;
-//    }
     public Ship(int length) {
         this.length = length;
     }
@@ -41,9 +26,6 @@ public class Ship {
     public void setHealthyDeck(int healthyDeck) {
         this.healthyDeck = healthyDeck;
     }
-
-
-
 
     public void init(int length) {
         this.length = length;

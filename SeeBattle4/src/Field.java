@@ -135,9 +135,11 @@ public class Field {
         } else {                    // если это ход компьютера
             do {
                 point = Point.getRandomPoint();
-                //           point = player.getShoot();        // для тестирования
                 cell = cellsPlayer[point.getX()][point.getY()];
             } while (cell.getSymbol() == '*' || cell.getSymbol() == 'D');
+            char[] chars = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
+
+            System.out.println("Ход компьютера: " + chars[point.getX()] + (point.getY() + 1));
         }
         if (cell.getSymbol() == '*' || cell.getSymbol() == 'D') {
             System.out.println("Уже стреляли");
@@ -151,19 +153,28 @@ public class Field {
             int healthy = cell.ship.getHealthyDeck() - 1;
             cell.ship.setHealthyDeck(healthy);
             if (healthy == 0) {
-                System.out.println("Попали! Корабль убит!" + healthy);
+                System.out.println("Попали! Корабль убит!");
+                if (isPlayerMove) {
+                    shipsComp.remove(cell.getShip());
+                    System.out.println("Осталось уничтожить " + shipsComp.size() + " кораблей компьютера");
+                } else {
+                    shipsPlayer.remove(cell.ship);
+                    System.out.println("У вас осталось " + shipsPlayer.size() + " кораблей");
+                }
             } else {
-                System.out.println("Попали! Корабль ранен" + healthy);
+                System.out.println("Попали! Корабль ранен");
             }
         } else {
             System.out.println("Ошибка!");
         }
-        System.out.println((point.getX() + 1) + " " + (point.getY() + 1));      // для тестирования
+//        System.out.println((point.getX() + 1) + " " + (point.getY() + 1));      // для тестирования
     }
 
     public boolean isGameEnd() {
-        //todo сделать проверку на конец игры
-        return false;
+        if (shipsComp.size() == 0 || shipsPlayer.size() == 0) {
+            return true;
+        }
+         return false;
     }
 
 }
